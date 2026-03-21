@@ -1,34 +1,31 @@
 {
   "name": "@sobird/npm-template",
+  "type": "module",
   "version": "1.2.0",
   "description": "npm template",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsup",
-    "eslint:fix": "eslint src --fix",
-    "test": "echo \"husky test scripts\"",
-    "lint:eslint": "eslint src --ext ts,js --report-unused-disable-directives --max-warnings 10",
-    "preversion": "pnpm lint:eslint",
-    "version": "git add -A .",
-    "postversion": "git push && git push --tags",
-    "postinstall": "echo \"postinstall\"",
-    "prepare": "husky"
-  },
+  "author": "sobird",
+  "license": "MIT",
   "keywords": [
     "npm",
     "npm-template",
     "typescript",
     "vitest"
   ],
-  "author": "sobird",
-  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "test": "vitest run --passWithNoTests",
+    "postinstall": "echo \"postinstall\"",
+    "prepare": "husky"
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
     "@types/node": "^20.17.19",
-    "eslint-config-sobird": "^0.2.16",
-    "glob": "^10.4.5",
+    "eslint": "^9.39.4",
+    "eslint-config-sobird": "^1.1.1",
     "husky": "^9.1.7",
     "tsup": "^8.5.1",
     "tsx": "^4.19.2",
