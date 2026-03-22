@@ -1,5 +1,4 @@
 # @sobird/murph
-A pristine TypeScript template for rapid project inception.
 
 [![npm][npm]][npm-url]
 ![TypeScript][typescript]
@@ -8,6 +7,8 @@ A pristine TypeScript template for rapid project inception.
 [![Build Status][build-status]][build-status-url]
 [![License][license]][license-url]
 [![Install Size][size]][size-url]
+
+> A pristine TypeScript template for rapid project inception.
 
 ## 🛠️ Step into the Singularity
 
@@ -19,6 +20,10 @@ npx degit sobird/murph .
 
 # Or, incept in a specific folder
 npx degit sobird/murph my-new-dimension
+
+# reset name & version
+cd my-new-dimension
+rm CHANGELOG.md
 
 # Initialize the equation
 pnpm install
@@ -39,15 +44,18 @@ The singularity is maintained through an automated lifecycle:
 2. **Review**: A release PR is automatically maintained by `release-please`.
 3. **Ascension**: Upon merging the release PR, the package is built, tested, and published to NPM with an OIDC-authenticated handshake.
 
-<!-- Badges -->
+## License
 
+[MIT](./LICENSE) License &copy; 2024 [sobird](https://github.com/sobird)
+
+<!-- Badges -->
 [npm]: https://img.shields.io/npm/v/@sobird/murph.svg?style=flat-square&logo=npm&label=@sobird/murph
 [npm-url]: https://www.npmjs.com/package/@sobird/murph
 [build-status]: https://img.shields.io/github/actions/workflow/status/sobird/murph/release.yml?label=CI&logo=github&style=flat-square
 [build-status-url]: https://github.com/sobird/murph/actions
 [size]: https://img.shields.io/badge/dynamic/json?style=flat-square&label=mass&query=$.publish.pretty&url=https://packagephobia.com/v2/api.json?p=@sobird/murph&color=blueviolet
 [size-url]: https://packagephobia.com/result?p=@sobird/murph
-[license]: https://img.shields.io/github/license/sobird/murph.svg?style=flat-square&cache=1
+[license]: https://img.shields.io/github/license/sobird/murph.svg?style=flat-square&v=1
 [license-url]: https://github.com/sobird/murph/blob/master/LICENSE
 [typescript]: https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white
 [cli]: https://img.shields.io/badge/-CLI-000000?style=flat-square&logo=gnu-bash
