@@ -4,12 +4,16 @@
  * A pristine TypeScript template for rapid project inception.
  */
 
-import { version } from '../package.json';
+import { name, version } from '../package.json';
 
 /**
  * The core inception point of the application.
  */
-export function inception() {
+export function murph() {
   // eslint-disable-next-line no-console
-  console.log('A pristine TypeScript singularity.', version);
+  console.log(name, version);
+  // eslint-disable-next-line no-console
+  console.log('A pristine TypeScript singularity.');
 }
+
+murph();
