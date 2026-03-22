@@ -1,21 +1,18 @@
-# --- System ---
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# System
 .DS_Store
 
 # Logs
-logs
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+*-debug.log*
+*-error.log*
 
 # Dependencies
 node_modules
 
 # Build
 dist
-lib
 *.tsbuildinfo
 
 # Testing
@@ -26,14 +23,14 @@ coverage
 .env
 .env.*
 !.env.example
-*.local
+!.env.sample
 
 # Editor directories and files
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
+!.vscode/launch.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
