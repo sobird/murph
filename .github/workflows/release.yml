@@ -48,5 +48,5 @@ jobs:
   publish:
     if: needs.release.outputs.created
     needs: release
-    uses: ./.github/workflows/publish.yaml
+    uses: ./.github/workflows/publish.yml
     secrets: inherit

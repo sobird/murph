@@ -16,7 +16,7 @@ npx degit sobird/murph my-new-project
 
 [npm]: https://img.shields.io/npm/v/@sobird/murph.svg?style=flat-square&logo=npm&label=@sobird/murph
 [npm-url]: https://www.npmjs.com/package/@sobird/murph
-[build-status]: https://img.shields.io/github/actions/workflow/status/sobird/murph/release.yaml?label=CI&logo=github&style=flat-square
+[build-status]: https://img.shields.io/github/actions/workflow/status/sobird/murph/release.yml?label=CI&logo=github&style=flat-square
 [build-status-url]: https://github.com/sobird/murph/actions
 [size]: https://packagephobia.com/badge?p=@sobird/murph
 [size-url]: https://packagephobia.com/result?p=@sobird/murph
