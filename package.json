@@ -6,10 +6,23 @@
   "description": "A pristine TypeScript template for rapid project inception.",
   "author": "sobird",
   "license": "MIT",
+  "homepage": "https://github.com/sobird/murph",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sobird/murph.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sobird/murph/issues"
+  },
   "keywords": [
     "typescript"
   ],
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=18.0.0"
   },
