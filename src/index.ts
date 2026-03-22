@@ -1,5 +1,5 @@
 /**
- * @sobird/void
+ * @sobird/murph
  *
  * A pristine TypeScript template for rapid project inception.
  */
@@ -11,5 +11,5 @@ import { version } from '../package.json';
  */
 export function inception() {
   // eslint-disable-next-line no-console
-  console.log('Project initialized in the void.', version);
+  console.log('A pristine TypeScript singularity.', version);
 }
