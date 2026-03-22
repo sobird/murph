@@ -47,7 +47,7 @@ The singularity is maintained through an automated lifecycle:
 [build-status-url]: https://github.com/sobird/murph/actions
 [size]: https://img.shields.io/badge/dynamic/json?style=flat-square&label=mass&query=$.publish.pretty&url=https://packagephobia.com/v2/api.json?p=@sobird/murph&color=blueviolet
 [size-url]: https://packagephobia.com/result?p=@sobird/murph
-[license]: https://img.shields.io/github/license/sobird/murph.svg?style=flat-square
+[license]: https://img.shields.io/github/license/sobird/murph.svg?style=flat-square&cache=1
 [license-url]: https://github.com/sobird/murph/blob/master/LICENSE
 [typescript]: https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white
 [cli]: https://img.shields.io/badge/-CLI-000000?style=flat-square&logo=gnu-bash
