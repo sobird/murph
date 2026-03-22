@@ -1,7 +1,7 @@
 {
   "name": "@sobird/murph",
   "type": "module",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "packageManager": "pnpm@10.30.3",
   "description": "A pristine TypeScript template for rapid project inception.",
   "author": "sobird",

@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.3.0](https://github.com/sobird/murph/compare/v1.2.0...v1.3.0) (2026-03-22)
+
+
+### Features
+
+* add ISSUE_TEMPLATE ([021a001](https://github.com/sobird/murph/commit/021a001b88290975f5a9a9dacf9420fae16dcbb6))
+* husky + lint-staged + commitlint ([5bfa891](https://github.com/sobird/murph/commit/5bfa891840c3ebfc57a040c3a65c62bcab6cf6fe))
+* murph: A pristine TypeScript singularity ([610945a](https://github.com/sobird/murph/commit/610945a21de3a905b1384b18d5081e6c935c100e))
+* upgrade eslint v9 ([59da14a](https://github.com/sobird/murph/commit/59da14a02d62b6e02dd507d6ea74e81f73c5a2cf))
+* upgrade workflows ([b90d7fb](https://github.com/sobird/murph/commit/b90d7fb8a776b18d59df8c5053daacc1c0dd78b3))
+* using tsup instead of Rollup for bundling ([9b0ca4e](https://github.com/sobird/murph/commit/9b0ca4ea465b00840cced6aec6e3cab5e1053c13))
+
+
+### Bug Fixes
+
+* add pnpm version ([fa2c436](https://github.com/sobird/murph/commit/fa2c4363287e06c8aa8e1b9892224a8d42461f1c))
+* add vscode settings.json ([4037dde](https://github.com/sobird/murph/commit/4037dde99703a1b89dfb7a2a8119a6a6672b8f93))
+* use the .yaml filename extension ([c9d1d42](https://github.com/sobird/murph/commit/c9d1d42ef984da3a6380108558b54e6dc929abff))
+* use the .yml filename extension ([08492cc](https://github.com/sobird/murph/commit/08492cc977463429ea59dab86cae7b74212a1f41))
+
 ## [1.2.0](https://github.com/sobird/npm-template/compare/v1.1.0...v1.2.0) (2025-02-17)
 
 
