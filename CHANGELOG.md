@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.1](https://github.com/sobird/murph/compare/v1.3.0...v1.3.1) (2026-03-31)
+
+
+### Bug Fixes
+
+* set vitest globals false ([dd78ded](https://github.com/sobird/murph/commit/dd78ded08a288d28089dd16606c630d7389f3d32))
+* update ignoring files ([6348b2b](https://github.com/sobird/murph/commit/6348b2b29f1fb1f93fc3bc8426c7f13d75f15936))
+
 ## [1.3.0](https://github.com/sobird/murph/compare/v1.2.0...v1.3.0) (2026-03-22)
 
 
