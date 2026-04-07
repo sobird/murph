@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.0](https://github.com/sobird/murph/compare/v1.3.1...v1.4.0) (2026-04-07)
+
+
+### Features
+
+* initialize @sobird/murph TypeScript project template ([8b65092](https://github.com/sobird/murph/commit/8b65092853ec88ab7c968e5a6dc2b4a00e83dd06))
+
+
+### Bug Fixes
+
+* unit test error ([2db4e31](https://github.com/sobird/murph/commit/2db4e31c0555237b9771dc92df9011d5425036fd))
+
 ## [1.3.1](https://github.com/sobird/murph/compare/v1.3.0...v1.3.1) (2026-03-31)
 
 
