@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/sobird/murph/compare/v1.4.0...v1.4.1) (2026-09-11)
+
+
+### Bug Fixes
+
+* **deps:** pin typescript back to 5.x ([e7e7065](https://github.com/sobird/murph/commit/e7e70653f83698ed1cb5fa3a568288f12c906bb0))
+
 ## [1.4.0](https://github.com/sobird/murph/compare/v1.3.1...v1.4.0) (2026-04-07)
 
 
