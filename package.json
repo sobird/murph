@@ -1,6 +1,6 @@
 {
   "name": "@sobird/murph",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "一个优雅的 TypeScript 项目模板，助您快速启动新项目。包含完整的 CI/CD 流水线、自动化版本管理、代码质量保障等现代化开发工具链。",
   "keywords": [
     "automation",
