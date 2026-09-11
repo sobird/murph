@@ -9,6 +9,7 @@
 **相关 Issue**: #issue-number (如有)
 
 **更改类型**:
+
 - [ ] 新功能 (feat)
 - [ ] Bug 修复 (fix)
 - [ ] 文档更新 (docs)
@@ -19,6 +20,7 @@
 - [ ] CI/CD 变动 (ci)
 
 **影响范围**:
+
 - [ ] Breaking Change (破坏性变更)
 - [ ] New Feature (新增功能)
 - [ ] Bug Fix (Bug 修复)
@@ -34,7 +36,8 @@
 - [ ] 我的代码遵循了项目的代码风格
 - [ ] 添加了相关的测试（如适用）
 - [ ] 所有测试都通过 (`pnpm test`)
-- [ ] 代码通过 ESLint 检查 (`pnpm lint`)
+- [ ] 代码通过 oxlint 检查 (`pnpm lint`)
+- [ ] 代码格式符合规范 (`pnpm fmt:check`)
 - [ ] TypeScript 类型检查通过 (`pnpm typecheck`)
 - [ ] 更新了必要的文档
 

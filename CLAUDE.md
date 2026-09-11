@@ -26,6 +26,12 @@ pnpm lint
 # 自动修复
 pnpm lint:fix
 
+# 代码格式化
+pnpm fmt
+
+# 校验格式（不写入）
+pnpm fmt:check
+
 # TypeScript 类型检查
 pnpm typecheck
 ```
@@ -47,19 +53,21 @@ pnpm typecheck
 - `ci`: CI/CD 配置文件变动
 
 **示例**:
+
 ```bash
 feat: 添加新的配置文件生成器
 fix(utils): 修复路径处理 bug
 docs(readme): 更新安装说明
 ```
 
-### ESLint 配置
+### 代码检查与格式化 (oxlint / oxfmt)
 
-项目使用 `eslint-config-sobird`，已配置：
+项目使用 [oxlint](https://oxc.rs/docs/guide/usage/linter) 做代码检查、[oxfmt](https://oxc.rs/docs/guide/usage/formatter) 做代码格式化：
 
-- 禁用 Prettier（由 ESLint 统一处理）
-- 严格的 TypeScript 规则
-- Git Hooks 自动格式化
+- **检查**: `.oxlintrc.json` 启用 `correctness` 类规则，插件包含 `typescript`、`unicorn`、`oxc`
+- **格式化**: `.oxfmtrc.json`，默认遵循 `.gitignore`
+- **IDE**: `.vscode/settings.json` 配置保存时用 `oxc.oxc-vscode` 自动格式化
+- **Git Hooks**: pre-commit 通过 `lint-staged` 运行 `oxlint --fix`
 
 ## 🔧 配置说明
 
@@ -162,18 +170,27 @@ murph/
 
 ### 常见问题
 
-**ESLint 错误**:
+**oxlint 错误**:
+
 ```bash
 pnpm lint:fix
 ```
 
+**格式不一致**:
+
+```bash
+pnpm fmt
+```
+
 **构建失败**:
+
 ```bash
 rm -rf node_modules && pnpm install
 pnpm build
 ```
 
 **测试失败**:
+
 ```bash
 pnpm test --reporter=verbose
 ```
@@ -186,5 +203,6 @@ VS Code 已配置好调试设置，可直接在编辑器中调试代码。
 
 - [TypeScript 官方文档](https://www.typescriptlang.org/docs/)
 - [Vitest 官方文档](https://vitest.dev/guide/)
-- [ESLint 配置指南](https://eslint.org/docs/latest/use/configure/)
+- [oxlint 文档](https://oxc.rs/docs/guide/usage/linter)
+- [oxfmt 文档](https://oxc.rs/docs/guide/usage/formatter)
 - [Release Please 文档](https://github.com/googleapis/release-please)

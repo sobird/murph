@@ -76,9 +76,9 @@ pnpm test
 
 ```typescript
 // src/example.test.ts
-import { expect, test } from 'vitest';
+import { expect, test } from "vitest";
 
-test('example test', () => {
+test("example test", () => {
   expect(1 + 1).toBe(2);
 });
 ```
@@ -96,6 +96,12 @@ pnpm lint
 # 自动修复问题
 pnpm lint:fix
 
+# 代码格式化
+pnpm fmt
+
+# 校验代码格式
+pnpm fmt:check
+
 # TypeScript 类型检查
 pnpm typecheck
 ```
@@ -104,7 +110,7 @@ pnpm typecheck
 
 项目配置了 Husky Git hooks：
 
-- **pre-commit**: 运行 ESLint 修复
+- **pre-commit**: 运行 oxlint 修复
 - **commit-msg**: 验证提交信息格式
 
 ## 📦 发布流程

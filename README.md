@@ -12,7 +12,7 @@
 
 - 完整的 CI/CD 流水线（GitHub Actions）
 - 自动化版本管理和发布（Release Please）
-- 代码质量保障（ESLint, Prettier, Husky）
+- 代码质量保障（oxlint, oxfmt, Husky）
 - TypeScript 严格模式配置
 - pnpm workspace 结构
 - npm 包发布配置和 OIDC 认证
@@ -59,8 +59,8 @@ pnpm install
 
 ### 代码风格
 
-- 使用 ESLint 进行代码检查
-- Prettier 代码格式化（已禁用，由 ESLint 统一处理）
+- 使用 [oxlint](https://oxc.rs/docs/guide/usage/linter) 进行代码检查
+- 使用 [oxfmt](https://oxc.rs/docs/guide/usage/formatter) 进行代码格式化
 - Git Hooks 确保提交质量
 
 ### 提交信息
@@ -90,11 +90,17 @@ pnpm test
 # 代码检查
 pnpm lint
 
-# TypeScript 类型检查
-pnpm typecheck
-
 # 自动修复代码
 pnpm lint:fix
+
+# 代码格式化
+pnpm fmt
+
+# 校验代码格式
+pnpm fmt:check
+
+# TypeScript 类型检查
+pnpm typecheck
 ```
 
 ## 🔧 配置说明
@@ -128,6 +134,7 @@ pnpm lint:fix
 [MIT](./LICENSE) License &copy; 2024 [sobird](https://github.com/sobird)
 
 <!-- Badges -->
+
 [npm]: https://img.shields.io/npm/v/@sobird/murph.svg?style=flat-square&logo=npm&label=@sobird/murph
 [npm-url]: https://www.npmjs.com/package/@sobird/murph
 [build-status]: https://img.shields.io/github/actions/workflow/status/sobird/murph/release.yml?label=CI&logo=github&style=flat-square
