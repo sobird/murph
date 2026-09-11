@@ -50,20 +50,20 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.5.0",
-    "@commitlint/config-conventional": "^20.5.0",
-    "@commitlint/types": "^20.5.0",
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
+    "@commitlint/types": "^21.2.0",
     "@murph/core": "workspace:*",
-    "@types/node": "^25.5.0",
-    "@vitest/coverage-v8": "4.1.0",
+    "@types/node": "^25.9.6",
+    "@vitest/coverage-v8": "^5.0.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
+    "lint-staged": "^17.5.1",
     "oxfmt": "^0.67.0",
     "oxlint": "^1.82.0",
     "tsup": "^8.5.1",
-    "tsx": "^4.21.0",
-    "typescript": "^5.9.3",
-    "vitest": "^4.1.0"
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.0"
   },
   "lint-staged": {
     "**/*": "oxfmt --no-error-on-unmatched-pattern",
