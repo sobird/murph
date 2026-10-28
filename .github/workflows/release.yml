@@ -12,7 +12,6 @@ permissions:
   id-token: write
   contents: write
   issues: write
-  pages: write
   pull-requests: write
 
 jobs:
