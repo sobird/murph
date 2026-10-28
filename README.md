@@ -3,7 +3,7 @@
 [![npm][npm]][npm-url]
 ![TypeScript][typescript]
 ![Node.js][node]
-![CLI][cli]
+![Bun][bun]
 [![Build Status][build-status]][build-status-url]
 [![License][license]][license-url]
 [![Install Size][size]][size-url]
@@ -137,12 +137,12 @@ bun run typecheck
 
 [npm]: https://img.shields.io/npm/v/@sobird/murph.svg?style=flat-square&logo=npm&label=@sobird/murph
 [npm-url]: https://www.npmjs.com/package/@sobird/murph
-[build-status]: https://img.shields.io/github/actions/workflow/status/sobird/murph/release.yml?label=CI&logo=github&style=flat-square
+[build-status]: https://img.shields.io/github/actions/workflow/status/sobird/murph/ci.yml?label=CI&logo=github&style=flat-square
 [build-status-url]: https://github.com/sobird/murph/actions
 [size]: https://img.shields.io/badge/dynamic/json?style=flat-square&label=mass&query=$.publish.pretty&url=https://packagephobia.com/v2/api.json?p=@sobird/murph&color=blueviolet
 [size-url]: https://packagephobia.com/result?p=@sobird/murph
 [license]: https://img.shields.io/github/license/sobird/murph.svg?style=flat-square&v=1
 [license-url]: https://github.com/sobird/murph/blob/master/LICENSE
-[typescript]: https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white
-[cli]: https://img.shields.io/badge/-CLI-000000?style=flat-square&logo=gnu-bash
-[node]: https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white
+[typescript]: https://img.shields.io/badge/dynamic/json?style=flat-square&label=TypeScript&query=$.devDependencies.typescript&url=https://raw.githubusercontent.com/sobird/murph/master/package.json&logo=typescript&logoColor=white&color=3178C6
+[node]: https://img.shields.io/badge/dynamic/json?style=flat-square&label=Node.js&query=$.engines.node&url=https://raw.githubusercontent.com/sobird/murph/master/package.json&logo=node.js&logoColor=white&color=339933
+[bun]: https://img.shields.io/badge/dynamic/json?style=flat-square&label=Bun&query=$.packageManager&url=https://raw.githubusercontent.com/sobird/murph/master/package.json&logo=bun&logoColor=white&color=000000
