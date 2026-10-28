@@ -105,6 +105,16 @@ bun run typecheck
 
 ## 🔧 配置说明
 
+### 依赖源
+
+项目默认通过 `npmmirror` 镜像加速依赖安装（见 `.npmrc`），`bun.lock` 中记录的也是镜像地址。如需改用官方 npm 源，将 `.npmrc` 中的地址替换为官方源后重新安装：
+
+```bash
+echo "registry=https://registry.npmjs.org/" > .npmrc
+rm -rf node_modules bun.lock
+bun install
+```
+
 ### 版本管理
 
 项目使用 `release-please` 自动生成版本号和变更日志。当满足以下条件时会创建发布 PR：

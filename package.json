@@ -32,9 +32,16 @@
     "dist"
   ],
   "type": "module",
+  "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -69,7 +76,7 @@
       "oxlint --fix",
       "oxfmt"
     ],
-    "*.{json,jsonc,css,scss,md}": [
+    "*.{json,jsonc,css,scss,md,yml,yaml}": [
       "oxfmt"
     ]
   },
