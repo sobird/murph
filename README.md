@@ -145,4 +145,4 @@ bun run typecheck
 [license-url]: https://github.com/sobird/murph/blob/master/LICENSE
 [typescript]: https://img.shields.io/badge/dynamic/json?style=flat-square&label=TypeScript&query=$.devDependencies.typescript&url=https://raw.githubusercontent.com/sobird/murph/master/package.json&logo=typescript&logoColor=white&color=3178C6
 [node]: https://img.shields.io/badge/dynamic/json?style=flat-square&label=Node.js&query=$.engines.node&url=https://raw.githubusercontent.com/sobird/murph/master/package.json&logo=node.js&logoColor=white&color=339933
-[bun]: https://img.shields.io/badge/dynamic/json?style=flat-square&label=Bun&query=$.packageManager&url=https://raw.githubusercontent.com/sobird/murph/master/package.json&logo=bun&logoColor=white&color=000000
+[bun]: https://img.shields.io/badge/dynamic/json?style=flat-square&label=Bun&query=$.packageManager&url=https://raw.githubusercontent.com/sobird/murph/master/package.json&logo=bun&logoColor=FBF0DF&color=000000
