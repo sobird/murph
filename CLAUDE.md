@@ -1,206 +1,30 @@
-# @sobird/murph - Claude Code 指南
+# CLAUDE.md
 
-## 🚀 快速开始
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-### 安装与初始化
+## 工具链
 
-```bash
-# 使用 degit 创建新项目
-npx degit sobird/murph my-project
-cd my-project
-bun install
-```
+- 使用 Bun 1.3.13（`packageManager` 固定）；不要用 npm/pnpm/yarn 安装依赖。
+- Node 必须满足 `^22.18.0 || ^24.11.0 || >=26.0.0`（tsup 9 的要求）。
+- TypeScript 固定 6.x。不要升级到 7：TS 7 不再提供编译器 API，tsup 的 dts 生成会失败。
+- 依赖源是 npmmirror，`bun.lock` 记录的是镜像地址；不要手改锁文件，用 `bun install` 重新生成。
 
-### 常用命令
+## 命令
 
-```bash
-# 构建项目
-bun run build
+- `bun install`；CI 使用 `bun install --frozen-lockfile`。
+- `bun run typecheck` / `bun run lint` / `bun run fmt:check` / `bun run build` / `bun run test`。
+- 运行单个测试文件：`bun run test -- src/index.test.ts`。
+- 完成任务前默认运行完整校验：typecheck、lint、fmt:check、build、test（覆盖率阈值 80%）。
+- 格式化失败先跑 `bun run fmt`；不要用 `--no-verify` 绕过钩子。
 
-# 运行测试
-bun run test
+## 约定
 
-# 代码检查
-bun run lint
+- 直接提交到 master；提交信息遵循 Conventional Commits（commitlint 校验）。
+- oxfmt 负责格式化与导入、package.json 脚本排序，不要手工调整顺序。
+- `@murph/core` 必须留在 devDependencies（workspace），tsup 才会把它打进 dist；移到 dependencies 会被外部化，发布后无法解析。
+- 版本号在构建时被打进产物，改版本后需重新 `bun run build`。
+- NPM 发布使用 `npm publish` + OIDC，不要改成 `bun publish`。
 
-# 自动修复
-bun run lint:fix
+## 发布流程
 
-# 代码格式化
-bun run fmt
-
-# 校验格式（不写入）
-bun run fmt:check
-
-# TypeScript 类型检查
-bun run typecheck
-```
-
-## 📝 开发规范
-
-### Git 提交规范
-
-严格遵循 [约定式提交](https://www.conventionalcommits.org/) 规范：
-
-- `feat`: 新功能 (minor 版本升级)
-- `fix`: Bug 修复 (patch 版本升级)
-- `docs`: 文档更新
-- `style`: 代码样式调整（不影响功能）
-- `refactor`: 重构代码
-- `test`: 添加或修改测试
-- `chore`: 构建过程或辅助工具变动
-- `perf`: 性能优化
-- `ci`: CI/CD 配置文件变动
-
-**示例**:
-
-```bash
-feat: 添加新的配置文件生成器
-fix(utils): 修复路径处理 bug
-docs(readme): 更新安装说明
-```
-
-### 代码检查与格式化 (oxlint / oxfmt)
-
-项目使用 [oxlint](https://oxc.rs/docs/guide/usage/linter) 做代码检查、[oxfmt](https://oxc.rs/docs/guide/usage/formatter) 做代码格式化：
-
-- **检查**: `.oxlintrc.json` 启用 `correctness` 类规则，插件包含 `typescript`、`unicorn`、`oxc`
-- **格式化**: `.oxfmtrc.json`，默认遵循 `.gitignore`
-- **IDE**: `.vscode/settings.json` 配置保存时用 `oxc.oxc-vscode` 自动格式化
-- **Git Hooks**: pre-commit 通过 `lint-staged` 运行 `oxlint --fix` 与 `oxfmt`
-
-## 🔧 配置说明
-
-### TypeScript 配置
-
-- **目标**: ESNext
-- **模块系统**: ESNext + bundler 解析
-- **严格模式**: 启用所有严格检查
-- **声明文件**: 自动生成到 dist/
-
-### 构建配置 (tsup)
-
-- **入口**: src/index.ts
-- **格式**: ESM
-- **清理**: 构建前清理输出目录
-- **摇树优化**: 启用
-- **压缩**: 启用
-
-### 测试配置 (Vitest)
-
-- **全局变量**: 默认禁用（更安全）
-- **覆盖率**: 集成 v8 引擎
-- **报告**: 控制台输出 + 覆盖率报告
-
-## 🚀 CI/CD 流水线
-
-### GitHub Actions 工作流
-
-1. **Release 工作流** (`release.yml`)
-   - 监听 master 分支推送
-   - 使用 Release Please 自动生成发布 PR
-   - 触发 Publish 工作流
-
-2. **Publish 工作流** (`publish.yml`)
-   - 检出代码
-   - 设置 Bun 和 Node.js
-   - 缓存依赖
-   - 安装依赖
-   - 构建项目
-   - 发布到 NPM（使用 OIDC 认证）
-
-### 版本管理
-
-- **自动版本**: Release Please 根据提交信息自动生成
-- **发布条件**: 合并发布 PR 到 master 分支
-- **版本策略**: 语义化版本控制 (SemVer)
-
-## 📁 项目结构
-
-```bash
-murph/
-├── src/              # 源代码
-│   └── index.ts      # 主入口
-├── packages/
-│   └── core/         # 核心包
-├── dist/             # 构建输出
-├── .github/          # GitHub 配置（工作流、Dependabot）
-├── .husky/           # Git Hooks
-└── node_modules/     # 依赖
-```
-
-## 🛡️ 安全实践
-
-### OIDC 认证
-
-项目使用 GitHub Actions 的 OIDC 功能安全发布到 NPM：
-
-- 无需长期有效的 NPM Token
-- 基于临时令牌的访问
-- 最小权限原则
-
-### 依赖安全
-
-- 定期依赖更新（通过 Dependabot）
-- 自动漏洞扫描
-- 锁定文件确保一致性 (`bun.lock`)
-
-## 🎯 最佳实践
-
-### 代码质量
-
-1. **类型安全**: 使用 TypeScript 严格模式
-2. **测试覆盖**: 重要功能必须有测试
-3. **代码审查**: 所有更改都需要 PR 审查
-4. **自动化**: 尽可能自动化重复任务
-
-### 发布流程
-
-1. 开发新功能或修复 bug
-2. 编写相关测试
-3. 确保所有检查通过
-4. 提交符合规范的 commit
-5. Release Please 自动创建发布 PR
-6. 审查和合并发布 PR
-7. 自动发布到 NPM
-
-## 🐛 故障排除
-
-### 常见问题
-
-**oxlint 错误**:
-
-```bash
-bun run lint:fix
-```
-
-**格式不一致**:
-
-```bash
-bun run fmt
-```
-
-**构建失败**:
-
-```bash
-rm -rf node_modules && bun install
-bun run build
-```
-
-**测试失败**:
-
-```bash
-bun run test --reporter=verbose
-```
-
-### 调试配置
-
-VS Code 已配置好调试设置，可直接在编辑器中调试代码。
-
-## 📚 参考链接
-
-- [TypeScript 官方文档](https://www.typescriptlang.org/docs/)
-- [Vitest 官方文档](https://vitest.dev/guide/)
-- [oxlint 文档](https://oxc.rs/docs/guide/usage/linter)
-- [oxfmt 文档](https://oxc.rs/docs/guide/usage/formatter)
-- [Release Please 文档](https://github.com/googleapis/release-please)
+- Release Please 根据 master 上的提交生成发布 PR；合并后且 `release_created` 为真时才触发 `publish.yml`。
