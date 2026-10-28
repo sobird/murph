@@ -67,7 +67,7 @@ docs(readme): 更新安装说明
 - **检查**: `.oxlintrc.json` 启用 `correctness` 类规则，插件包含 `typescript`、`unicorn`、`oxc`
 - **格式化**: `.oxfmtrc.json`，默认遵循 `.gitignore`
 - **IDE**: `.vscode/settings.json` 配置保存时用 `oxc.oxc-vscode` 自动格式化
-- **Git Hooks**: pre-commit 通过 `lint-staged` 运行 `oxlint --fix`
+- **Git Hooks**: pre-commit 通过 `lint-staged` 运行 `oxlint --fix` 与 `oxfmt`
 
 ## 🔧 配置说明
 
@@ -124,10 +124,9 @@ murph/
 ├── packages/
 │   └── core/         # 核心包
 ├── dist/             # 构建输出
-├── .github/          # GitHub 配置
+├── .github/          # GitHub 配置（工作流、Dependabot）
 ├── .husky/           # Git Hooks
-├── node_modules/     # 依赖
-└── scripts/          # 脚本工具
+└── node_modules/     # 依赖
 ```
 
 ## 🛡️ 安全实践
