@@ -6,5 +6,5 @@
   "sortPackageJson": {
     "sortScripts": true
   },
-  "ignorePatterns": ["CHANGELOG.md", "coverage/", "dist/", "node_modules/", "pnpm-lock.yaml"]
+  "ignorePatterns": ["CHANGELOG.md", "coverage/", "dist/", "node_modules/", "bun.lock"]
 }

@@ -17,7 +17,7 @@ cd murph
 3. 安装依赖：
 
 ```bash
-pnpm install
+bun install
 ```
 
 4. 创建特性分支：
@@ -67,7 +67,7 @@ Closes #123
 ### 运行测试
 
 ```bash
-pnpm test
+bun run test
 ```
 
 ### 编写测试
@@ -91,19 +91,19 @@ test("example test", () => {
 
 ```bash
 # 运行所有检查
-pnpm lint
+bun run lint
 
 # 自动修复问题
-pnpm lint:fix
+bun run lint:fix
 
 # 代码格式化
-pnpm fmt
+bun run fmt
 
 # 校验代码格式
-pnpm fmt:check
+bun run fmt:check
 
 # TypeScript 类型检查
-pnpm typecheck
+bun run typecheck
 ```
 
 ### Git Hooks

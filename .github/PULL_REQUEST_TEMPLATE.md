@@ -35,10 +35,10 @@
 
 - [ ] 我的代码遵循了项目的代码风格
 - [ ] 添加了相关的测试（如适用）
-- [ ] 所有测试都通过 (`pnpm test`)
-- [ ] 代码通过 oxlint 检查 (`pnpm lint`)
-- [ ] 代码格式符合规范 (`pnpm fmt:check`)
-- [ ] TypeScript 类型检查通过 (`pnpm typecheck`)
+- [ ] 所有测试都通过 (`bun run test`)
+- [ ] 代码通过 oxlint 检查 (`bun run lint`)
+- [ ] 代码格式符合规范 (`bun run fmt:check`)
+- [ ] TypeScript 类型检查通过 (`bun run typecheck`)
 - [ ] 更新了必要的文档
 
 ## 🧪 测试
@@ -47,7 +47,7 @@
 
 ```bash
 # 测试命令
-pnpm test
+bun run test
 
 # 或其他相关测试
 ```

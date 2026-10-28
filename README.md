@@ -14,7 +14,7 @@
 - 自动化版本管理和发布（Release Please）
 - 代码质量保障（oxlint, oxfmt, Husky）
 - TypeScript 严格模式配置
-- pnpm workspace 结构
+- Bun workspace 结构
 - npm 包发布配置和 OIDC 认证
 - 测试框架集成（Vitest）
 - 构建工具配置（tsup）
@@ -36,7 +36,7 @@ npx degit sobird/murph my-new-project
 cd my-new-project
 
 # 初始化项目
-pnpm install
+bun install
 ```
 
 ### 🛰️ 工程治理
@@ -79,28 +79,28 @@ pnpm install
 
 ```bash
 # 安装依赖
-pnpm install
+bun install
 
 # 构建项目
-pnpm build
+bun run build
 
 # 运行测试
-pnpm test
+bun run test
 
 # 代码检查
-pnpm lint
+bun run lint
 
 # 自动修复代码
-pnpm lint:fix
+bun run lint:fix
 
 # 代码格式化
-pnpm fmt
+bun run fmt
 
 # 校验代码格式
-pnpm fmt:check
+bun run fmt:check
 
 # TypeScript 类型检查
-pnpm typecheck
+bun run typecheck
 ```
 
 ## 🔧 配置说明

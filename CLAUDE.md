@@ -8,32 +8,32 @@
 # 使用 degit 创建新项目
 npx degit sobird/murph my-project
 cd my-project
-pnpm install
+bun install
 ```
 
 ### 常用命令
 
 ```bash
 # 构建项目
-pnpm build
+bun run build
 
 # 运行测试
-pnpm test
+bun run test
 
 # 代码检查
-pnpm lint
+bun run lint
 
 # 自动修复
-pnpm lint:fix
+bun run lint:fix
 
 # 代码格式化
-pnpm fmt
+bun run fmt
 
 # 校验格式（不写入）
-pnpm fmt:check
+bun run fmt:check
 
 # TypeScript 类型检查
-pnpm typecheck
+bun run typecheck
 ```
 
 ## 📝 开发规范
@@ -103,7 +103,7 @@ docs(readme): 更新安装说明
 
 2. **Publish 工作流** (`publish.yml`)
    - 检出代码
-   - 设置 pnpm 和 Node.js
+   - 设置 Bun 和 Node.js
    - 缓存依赖
    - 安装依赖
    - 构建项目
@@ -144,7 +144,7 @@ murph/
 
 - 定期依赖更新（通过 Dependabot）
 - 自动漏洞扫描
-- 锁定文件确保一致性 (`pnpm-lock.yaml`)
+- 锁定文件确保一致性 (`bun.lock`)
 
 ## 🎯 最佳实践
 
@@ -172,26 +172,26 @@ murph/
 **oxlint 错误**:
 
 ```bash
-pnpm lint:fix
+bun run lint:fix
 ```
 
 **格式不一致**:
 
 ```bash
-pnpm fmt
+bun run fmt
 ```
 
 **构建失败**:
 
 ```bash
-rm -rf node_modules && pnpm install
-pnpm build
+rm -rf node_modules && bun install
+bun run build
 ```
 
 **测试失败**:
 
 ```bash
-pnpm test --reporter=verbose
+bun run test --reporter=verbose
 ```
 
 ### 调试配置
